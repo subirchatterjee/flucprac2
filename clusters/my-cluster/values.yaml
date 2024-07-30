@@ -1,0 +1,20 @@
+replicaCount: 2
+
+image:
+  repository: siddharth67/block-buster-dev:7.5.0
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+
+service:
+  type: NodePort
+  nodePort: 30005
+
+namespace:
+  name: 5-demo
+  
+labels:
+    name: bb-app
+    version: 7.5.0
+    env: dev
